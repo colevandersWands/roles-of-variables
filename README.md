@@ -10,3 +10,4 @@ exercise:
 * create a profile for each variable 
 * determine each variable's role
 * and study how they all interact
+* no need for test cases, this is an analysis of one set of values. (but do run the file to make sure behavior is preserved, thus the console.logs)

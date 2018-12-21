@@ -17,6 +17,8 @@ console.log('--- original code ---');
     }
     a -= a;
   }
+
+  console.log(a, b, c, d)
 }
 
 console.log('--- single variable analyses ---');
@@ -82,6 +84,8 @@ console.log('--- role-based refactor ---')
     }
     a_constant -= a_constant;
   }
+
+  console.log(a_constant, b_aggregator, c_fixed, d_most_wanted)
 }
 
 console.log('--- variable interactions ---')
@@ -106,4 +110,6 @@ console.log('--- variable interactions ---')
     }
     a_constant -= a_constant;
   }
+
+  console.log(a_constant, b_aggregator, c_fixed, d_most_wanted, interacts)
 }
