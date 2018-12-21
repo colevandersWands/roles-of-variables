@@ -15,7 +15,7 @@ console.log('--- original code ---');
       b += a;
       d.push(b)
     }
-    a -= a + 1;
+    a -= a;
   }
 }
 
@@ -28,7 +28,7 @@ console.log('--- single variable analyses ---');
       type: 'number',
       read: 'condition & appending to b',
       modified: 'decremented in for loop',
-      role: 'stepper'
+      role: 'constant (value never changes)'
     },
     b: {
       created: 'global',
@@ -70,17 +70,17 @@ console.log('--- single variable analyses ---');
 console.log('--- role-based refactor ---')
 
 {
-  let a_stepper = 0;
+  let a_constant = 0;
   let b_aggregator = '';
   const c_fixed = 14;
   const d_most_wanted = [];
 
   for (let e_stepper = 24; e_stepper > c_fixed; e_stepper--) {
-    if ((a_stepper % 3) === 0) {
+    if ((a_constant % 3) === 0) {
       b_aggregator += a_stepper;
       d_most_wanted.push(b_aggregator)
     }
-    a_stepper -= a_stepper + 1;
+    a_constant -= a_constant;
   }
 }
 
@@ -92,18 +92,18 @@ console.log('--- variable interactions ---')
   const interacts = []
 
 
-  let a_stepper = 0;
+  let a_constant = 0;
   let b_aggregator = '';
   const c_fixed = 14;
   const d_most_wanted = [];
 
   for (let e_stepper = 24; e_stepper > c_fixed; e_stepper--) {
-    if ((a_stepper % 3) === 0) {
-      b_aggregator += a_stepper; 
+    if ((a_constant % 3) === 0) {
+      b_aggregator += a_constant; 
           interacts.push('a is concatenated to b')
       d_most_wanted.push(b_aggregator) 
           interacts.push('b is pushed into d')
     }
-    a_stepper -= a_stepper + 1;
+    a_constant -= a_constant;
   }
 }
