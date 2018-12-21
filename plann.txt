@@ -1,0 +1,77 @@
+split this into two classifications
+  usage description
+    - what is done to it
+      http://www.cs.joensuu.fi/~saja/var_roles/role_intro.html
+      'role (v. 2.0)'
+    when/where declared/assigned
+    where is read
+    where is modified
+  macro role
+    - relation to strategy
+      covered in the next set of exercises on chunking
+    constant
+    utility
+    organizer - ds's
+    chunk-stopper
+
+the roles in isolation
+  - define classifying questions for each
+    - can have multiple roles
+    where is it declared and assigned
+    where is it read
+    where is it modified
+  - primitives and structures, different?
+    organizer -> arrs or objs
+  constants
+    declared at a certain point and used as a reference thereafter
+    will always be on the right hand side of assignments (after declaration)
+    or in boolean checks
+    should be refactored to 'const'
+  strategy variables
+    variables used to store important values along the steps to a solutions
+    may be associated with things in the real world (mapping)
+    carry partial information towards the solution
+    sub-types
+      result
+      args
+      chunk-stoppers (coming soon to an exercise near you!)
+  - need to clarify these distinctions -
+  utility variables
+    things that are used as part of the strategy but do not carry partial information towards the solution
+    commonly spotted around control flow structures
+    sub-types
+      steppers
+
+
+  strategic or utility?    
+    accumulators (gatherers in his work)
+    most-recent holders
+    most-wanted holders
+    indicator(?) a toggle or the like
+    temporary or transient
+
+
+interaction types
+  different ways variables can interact
+
+strategy requirements
+  starting from problem & going down to var types needed
+  * http://saja.kapsi.fi/var_roles/teaching.html
+  http://www.cs.joensuu.fi/~saja/var_roles/abstracts/ppig05_byck_saja.pdf 
+
+special to fp
+  pg 16: http://www.cs.joensuu.fi/~saja/var_roles/abstracts/cse06.pdf
+
+
+http://saja.kapsi.fi/var_roles/role_list.html
+http://saja.kapsi.fi/var_roles/
+
+
+
+
+
+
+
+
+
+
